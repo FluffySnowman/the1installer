@@ -35,7 +35,7 @@ Write-Host "Downloading $inputinstall..."
 
 # Downloading the software using curl
 
-curl -v -o "downloads\$file" -UseBasicParsing $url
+curl -v -o downloads\$file -UseBasicParsing $url
 
 
 
@@ -74,7 +74,7 @@ $install_yes_no = Read-Host "Do you want to install $inputinstall? (y/n) "
 
 if ($install_yes_no -eq "y") {
     Write-Host "Installing $inputinstall..."
-    $install = Start-Process -FilePath "downloads\$file" -ArgumentList "/S" -Wait -PassThru
+    $install = Start-Process -FilePath downloads\$file -ArgumentList "/S" -Wait -PassThru
     Write-Host "Installation Complete!"
 } else {
     Write-Host "Installation Cancelled!"
