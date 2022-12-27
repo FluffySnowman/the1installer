@@ -74,8 +74,17 @@ $install_yes_no = Read-Host "Do you want to install $inputinstall? (y/n) "
 
 if ($install_yes_no -eq "y") {
     Write-Host "Installing $inputinstall..."
-    $install = Start-Process -FilePath downloads\$file -ArgumentList "/S" -Wait -PassThru
+
+    $extension1 = $file.Extension 
+
+    if ( $extension1 -eq ".exe" ) {
+        $install = Start-Process -FilePath downloads\$file -ArgumentList "/S" -Wait -PassThru
+    } else if ( $extension1 -eq ".msi" ) {
+        $install = start downloads\$file
+    }
+
     Write-Host "Installation Complete!"
+    
 } else {
     Write-Host "Installation Cancelled!"
 }
