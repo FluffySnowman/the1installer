@@ -10,4 +10,4 @@ notepadplusplus->notepad++.exe->https://objects.githubusercontent.com/github-pro
 atom->atom.exe->https://objects.githubusercontent.com/github-production-release-asset-2e65be/3228505/d8ce5ead-a754-4e77-a367-fd83f0fac9dc?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20221226%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221226T182151Z&X-Amz-Expires=300&X-Amz-Signature=f8b7eb796ae1772c3d899cfe4d0c1ae753dce5868aa7155c054ebe8453fb43b3&X-Amz-SignedHeaders=host&actor_id=51316255&key_id=0&repo_id=3228505&response-content-disposition=attachment%3B%20filename%3DAtomSetup.exe&response-content-type=application%2Foctet-stream
 intellij->intellij.exe->https://download.jetbrains.com/idea/ideaIU-2021.3.1.exe
 python3->python3.exe->https://www.python.org/ftp/python/3.11.1/python-3.11.1-amd64.exe
-
+nodejs->nodejs.msi->https://nodejs.org/dist/v18.12.1/node-v18.12.1-x64.msi
