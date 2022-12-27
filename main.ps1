@@ -78,9 +78,9 @@ if ($install_yes_no -eq "y") {
     $extension1 = $file.Extension 
 
     if ( $extension1 -eq ".exe" ) {
-        $install = Start-Process -FilePath downloads\$file -ArgumentList "/S" -Wait -PassThru
+        Start-Process -FilePath downloads\$file -ArgumentList "/S" -Wait -PassThru
     } elseif ( $extension1 -eq ".msi" ) {
-        $install = start downloads\$file
+        start downloads\$file -Wait -PassThru
     }
 
     Write-Host "Installation Complete!"
