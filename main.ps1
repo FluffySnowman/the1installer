@@ -75,11 +75,13 @@ $install_yes_no = Read-Host "Do you want to install $inputinstall? (y/n) "
 if ($install_yes_no -eq "y") {
     Write-Host "Installing $inputinstall..."
 
-    $extension1 = $file.Extension 
+    $extension1 = Split-Path $file -Extension
 
     if ( $extension1 -eq ".exe" ) {
+        Write-Host "File Extension is .exe"
         Start-Process -FilePath downloads\$file -ArgumentList "/S" -Wait -PassThru
     } elseif ( $extension1 -eq ".msi" ) {
+        Write-Host "File Extension is .msi"
         start downloads\$file -Wait -PassThru
     }
 
