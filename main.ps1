@@ -77,10 +77,10 @@ if ($install_yes_no -eq "y") {
 
     $filepath1 = (Split-Path -Path downloads\$file -Leaf).Split(".")[1]
 
-    if ( $extension1 -eq "exe" ) {
+    if ( $filepath1 -eq "exe" ) {
         Write-Host "File Extension is .exe"
         Start-Process -FilePath downloads\$file -ArgumentList "/S" -Wait -PassThru
-    } elseif ( $extension1 -eq "msi" ) {
+    } elseif ( $filepath1 -eq "msi" ) {
         Write-Host "File Extension is .msi"
         start downloads\$file -Wait -PassThru
     }
